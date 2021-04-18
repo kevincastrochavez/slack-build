@@ -11,6 +11,14 @@ const SidebarOptionContainer = styled.div`
     background-color: #340e36;
     cursor: pointer;
   }
+
+  > h3 {
+    font-weight: 500;
+  }
+
+  > h3 > span {
+    padding: 15px;
+  }
 `;
 
 const SidebarOptionChannel = styled.div``;

@@ -1,10 +1,12 @@
 import React from "react";
 import {
+  Add,
   Apps,
   BookmarkBorder,
   Create,
   Drafts,
   ExpandLess,
+  ExpandMore,
   FiberManualRecord,
   FileCopy,
   Inbox,
@@ -38,6 +40,10 @@ function Sidebar() {
       <SidebarOption Icon={Apps} title="Apps" />
       <SidebarOption Icon={FileCopy} title="File brower" />
       <SidebarOption Icon={ExpandLess} title="Show less" />
+      <hr />
+      <SidebarOption Icon={ExpandMore} title="Channels" />
+      <hr />
+      <SidebarOption Icon={Add} title="Add Channel" addChannelOption />
     </SidebarContainer>
   );
 }

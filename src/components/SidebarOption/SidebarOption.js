@@ -5,7 +5,7 @@ import {
   SidebarOptionChannel,
 } from "./SidebarOption.styles";
 
-function SidebarOption({ Icon, title }) {
+function SidebarOption({ Icon, title, addChannelOption }) {
   return (
     <SidebarOptionContainer>
       {Icon && <Icon fontSize="small" style={{ padding: 10 }} />}
