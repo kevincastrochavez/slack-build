@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Chat from "./components/Chat/Chat";
 
 import "./App.css";
 
@@ -16,7 +17,7 @@ function App() {
         <AppBody>
           <Sidebar />
           <Switch>
-            <Route path="/" />
+            <Route path="/" component={Chat} />
           </Switch>
         </AppBody>
       </Router>

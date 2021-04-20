@@ -41,9 +41,9 @@ function Sidebar() {
       <SidebarOption Icon={InsertComment} title="Threads" />
       <SidebarOption Icon={Inbox} title="Mentions & reactions" />
       <SidebarOption Icon={Drafts} title="Saved items" />
-      <SidebarOption Icon={BookmarkBorder} title="Channel browser" />
-      <SidebarOption Icon={PeopleAlt} title="People & user groups" />
-      <SidebarOption Icon={Apps} title="Apps" />
+      {/* <SidebarOption Icon={BookmarkBorder} title="Channel browser" /> */}
+      {/* <SidebarOption Icon={PeopleAlt} title="People & user groups" /> */}
+      {/* <SidebarOption Icon={Apps} title="Apps" /> */}
       <SidebarOption Icon={FileCopy} title="File brower" />
       <SidebarOption Icon={ExpandLess} title="Show less" />
       <hr />
