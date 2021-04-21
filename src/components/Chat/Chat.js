@@ -35,7 +35,7 @@ function Chat() {
 
       <ChatMessages></ChatMessages>
 
-      <ChatInput />
+      <ChatInput channelId={roomId} />
     </ChatContainer>
   );
 }
