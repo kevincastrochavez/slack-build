@@ -6,7 +6,7 @@ import { firestore } from "../../firebase";
 
 import { ChatInputContainer } from "./ChatInput.styles";
 
-function ChatInput({ channelName, channelId }) {
+function ChatInput({ channelName, channelId, chatRef }) {
   const [input, setInput] = useState("");
   console.log(channelId);
 
@@ -24,6 +24,10 @@ function ChatInput({ channelName, channelId }) {
       userImage: "",
     });
 
+    chatRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+
     setInput("");
   };
 
@@ -33,7 +37,7 @@ function ChatInput({ channelName, channelId }) {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder={`Message #Room`}
+          placeholder={`Message #${channelName}`}
         />
         <Button hidden type="submit" onClick={sendMessage}>
           SEND
