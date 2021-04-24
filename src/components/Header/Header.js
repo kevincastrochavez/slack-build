@@ -17,7 +17,6 @@ import {
 function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [user] = useAuthState(auth);
-  console.log(user);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);

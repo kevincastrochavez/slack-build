@@ -1,5 +1,6 @@
 import React from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 import {
   Add,
   Apps,
@@ -17,9 +18,10 @@ import {
 
 import { SidebarContainer, SidebarHeader, SidebarInfo } from "./Sidebar.styles";
 import SidebarOption from "../SidebarOption/SidebarOption";
-import { firestore } from "../../firebase";
+import { auth, firestore } from "../../firebase";
 
 function Sidebar() {
+  const [user] = useAuthState(auth);
   const [channels, loading, error] = useCollection(
     firestore.collection("rooms")
   );
@@ -31,7 +33,7 @@ function Sidebar() {
           <h2>HQ Channel</h2>
           <h3>
             <FiberManualRecord />
-            Kevin Castro
+            {user?.displayName}
           </h3>
         </SidebarInfo>
 
