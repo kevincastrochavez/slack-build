@@ -49,9 +49,9 @@ function Sidebar() {
       <SidebarOption Icon={FileCopy} title="File brower" />
       <SidebarOption Icon={ExpandLess} title="Show less" />
       <hr />
-      <SidebarOption Icon={ExpandMore} title="Channels" />
       <SidebarOption Icon={Add} addChannelOption title="Add Channel" />
       <hr />
+      <SidebarOption Icon={ExpandMore} title="Channels" />
 
       {channels?.docs.map((doc) => (
         <SidebarOption key={doc.id} title={doc.data().name} id={doc.id} />
